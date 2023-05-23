@@ -1,11 +1,11 @@
-//auto complete template for proxy setup
+
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function (app) {
   app.use(
     '/api/*',
     createProxyMiddleware({
-      target: 'http://localhost:7071/',
+      target: 'http://localhost:7071',
       changeOrigin: true,
     })
   );
